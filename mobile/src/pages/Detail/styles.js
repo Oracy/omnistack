@@ -12,7 +12,6 @@ export default StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginTop: 48,
     },
 
     incident: {
@@ -26,6 +25,7 @@ export default StyleSheet.create({
         fontSize: 14,
         color: '#41414d',
         fontWeight: 'bold',
+        marginTop: 24,
     },
 
     incidentValue: {

@@ -6,7 +6,6 @@ import * as MailComposer from 'expo-mail-composer'
 
 import logoImg from '../../assets/logo.png'
 import styles from './styles'
-import api from '../../services/api'
 
 const Detail = () => {
     const navigation = useNavigation()
@@ -36,6 +35,7 @@ const Detail = () => {
         <View style={styles.container}>
             <View style={styles.header}>
                 <Image source={logoImg} />
+
                 <TouchableOpacity onPress={navigateBack}>
                     <Feather
                         name="arrow-left"
@@ -44,6 +44,7 @@ const Detail = () => {
                     />
                 </TouchableOpacity>
             </View>
+
             <View style={styles.incident}>
                 <Text style={[styles.incidentProperty, { marginTop: 0 }]}>ONG:</Text>
                 <Text style={styles.incidentValue}>{ incident.name } de { incident.city}/{incident.uf}</Text>
@@ -58,6 +59,7 @@ const Detail = () => {
                     }).format(incident.value)}
                 </Text>
             </View>
+
             <View style ={styles.contactBox}>
                 <Text style={styles.heroTitle}>Salve o dia!</Text>
                 <Text style={styles.heroTitle}>Seja o heroi desse caso.</Text>
