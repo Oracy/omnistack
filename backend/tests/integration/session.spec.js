@@ -12,4 +12,9 @@ describe('Session', () => {
         .post('/sessions')
         .send("")
     })
+
+    afterAll(async () => {
+        await connection.migrate.rollback()
+        await connection.destroy()
+    })
 })
